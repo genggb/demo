@@ -260,7 +260,7 @@ public class HttpUtils {
 //        String name = URLEncoder.encode("1+&2", "UTF-8");
         params.put("name", "1+2");
         String result = HttpUtils.postRequest(url, params);
-        System.out.println("结果："+result);
+        System.out.println("结果：" + result);
     }
 
 

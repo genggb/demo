@@ -23,12 +23,12 @@ public class JSONObjectTest {
          */
         System.out.println("案例1：");
         //**正确写法
-        System.out.println("testc="+data.optString("testc"));
-        System.out.println("testa="+data.optJSONObject("testa"));
+        System.out.println("testc=" + data.optString("testc"));
+        System.out.println("testa=" + data.optJSONObject("testa"));
 
         //**错误写法(不存在testc会报错)
 //        System.out.println("testc="+data.getString("testc"));
-        System.out.println("testa="+data.getJSONObject("testa"));
+        System.out.println("testa=" + data.getJSONObject("testa"));
 
         /**
          * 2、当json字符串经过JSONArray.fromObject,JSONObject.fromObject转换之后，
@@ -39,12 +39,12 @@ public class JSONObjectTest {
         //**正确写法
         JSONObject testb_1 = data.optJSONObject("testb");
         JSONObject testb_2 = data.optJSONObject("testb");
-        System.out.println(testb_1==testb_2);
+        System.out.println(testb_1 == testb_2);
 
         //**错误写法
         JSONObject _testb_1 = JSONObject.fromObject(data.get("testb"));
         JSONObject _testb_2 = JSONObject.fromObject(data.get("testb"));
-        System.out.println(_testb_1==_testb_2);
+        System.out.println(_testb_1 == _testb_2);
 
         /**
          * 3、当json对象中有个参数是null，使用JSONArray.fromObject,JSONObject.fromObject转换之后，
@@ -68,7 +68,7 @@ public class JSONObjectTest {
         JSONObject _testa = data.optJSONObject("testa");
         System.out.println(_testa);
         //**正确写法
-        if(_testa.isNullObject()){
+        if (_testa.isNullObject()) {
             System.out.println("_testa.isNullObject()：_testa为空");
         }
 
